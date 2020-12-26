@@ -1,40 +1,53 @@
 # ThinkPad T450s Big Sur OpenCore 0.6.4
-![Thismachine](./picture/Thismachine.png)
-## 简介
-- 这是一个完整的ThinkPad T450s macOS Big Sur + DW1820a 配置。
-- 声卡默认 layout-id = 32，耳机杂音请使用声卡修复脚本(ALCPlugFix)。 
-- 支持触摸屏（带有多点触控和触屏手势）。
-- 支持 Catalina。
-- 支持 ThinkPad X250 ThinkPad T450。
 
-## 硬件信息
+![Thismachine](./picture/Thismachine.png)
+
+## Changes in this fork
+1. Support of Intel 7265 WiFI Bluetooth adapter instead of Broadcom
+2. Comand and option buttons are [swapped](https://github.com/nickdsmd/Lenovo-ThinkPad-T450s-Hackintosh-Big-Sur-OpenCore/commit/0477379a8c0f3b6db4acb3ac29c27d82ee28cf98) (Win button is option, Alt is Command)
+3. In the section `PlatformInfo` of [config.plist](./EFI/OC/config.plist) you should paste your own Ids for:
+    - `MLB`
+    - `ROM`
+    - `SystemSerialNumber`
+    - `SystemUUID`
+
+
+## Introduction
+
+- This is a full ThinkPad T450s macOS Big Sur + Intel 7265 configuration.
+- Sound card default Layout-id = 32, earphone noise please use the sound card repair script(ALCPlugFix).
+- Support touch screen (With multi-touch and touchscreen gestures).
+- support Catalina.
+- support ThinkPad X250 ThinkPad T450.
+
+## Hardware information
 
 ```  
 - CPU：Intel Core i7-5600U 2.6GHz (Boots 3.2GHz)
 
-- 核心显卡：Intel HD 5500 Graphics 
+- The core graphics：Intel HD 5500 Graphics 
 
-- 声卡：ALC292
+- sound card：ALC292
 
-- 无线网卡：DW1820A
+- Wireless network card：Intel 7265
 ```
 
-# ThinkPad助手(ThinkpadAssistant)
-- 可让您在Thinkpad T450s X250 T450笔记本电脑上使用所有功能键。
-- 复制ThinkpadAssistant到应用程序文件夹。
-- 启动ThinkpadAssistant，并在菜单栏中勾选“登录时启动”。
-- F4：麦克风静音/取消静音（带有状态LED指示）。
-- F7：屏幕镜像/屏幕扩展。
-- F8：启用/停用Wi-Fi。
-- 左Shift + F8键：启用/停用蓝牙。
-- F9：打开系统偏好设置。
-- F12：打开启动板。
-- FN + Space：切换键盘背光。
-- FN + 4：睡眠快捷键。
-（睡眠过程中再次按下睡眠快捷键即可终止睡眠。）
-（连接外部显示器时，按睡眠按钮后，工作屏幕变为外部显示器（内部屏幕关闭）；再按一次睡眠按钮，内部和外部显示器恢复正常。）
-- PrtSc 映射到 F13：可在系统偏好设置-->键盘-->快捷键将它设置为截图。
--------------------------------------------------------------------------------------------------------------
+# ThinkPad Assistant 
+- Allows you to use all function keys on Thinkpad T450s X250 T450 laptop.
+- Copy the ThinkpadAssistant into the Application folder.
+- Start ThinkpadAssistant and check "Start when logged in" in the menu bar.
+- F4: Mute / Unmute Microphone (with Status LED indication).
+- F7: Screen mirroring / Screen extending.
+- F8: Activate / Deactivate Wi-Fi.
+- Left Shift+F8: Activate / Deactivate Bluetooth.
+- F9: Open System Preferences.
+- F12: Open Launchpad.
+- FN+Space: Toggle Keyboard Backlight.
+- FN + 4: Sleep shortcut.
+  (press the sleep shortcut again during sleep to terminate sleep).
+  (When an external monitor is connected, after pressing the sleep button, the working screen changes to an external monitor (the internal screen is turned off); pressing the sleep button again, the internal and external monitors return to normal.)
+- PrtSc maps to F13: this can be set as screenshot in system preferences -> keyboard -> shortcut.
+-----------------------------------------------------------------------------------------------------------------
 ![demo](./picture/demo.gif)
 
 ## BIOS (1.37)
@@ -48,23 +61,23 @@
 -  UEFI/Legacy Boot`: **UEFI Only**;
 -  CSM Support`: **Yes**.
 
-## 有效
+## Effective
 - CPU
-- 睡眠/唤醒
+- Sleep/Wake up
 - Wifi
-- 蓝牙 
+- Bluetooth
 - Handoff, Continuity, AirDrop
 - iMessage, FaceTime, App Store, iTunes Store
-- 以太网卡
-- 声卡
+- Ethernet card
+- sound card
 - USB
-- 电池
-- 触摸屏 
-- 触摸板 
-- 小红点
+- The battery
+- touch screen
+- touch pad
+- little red dot
 - miniDP
-- SD卡读卡器
+- SD card reader
 
-## 无效
+## Invalid
 - VGA
-- 指纹
+- The fingerprint
