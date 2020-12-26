@@ -3,8 +3,8 @@
 ![Thismachine](./picture/Thismachine.png)
 
 ## Changes in this fork
-1. Support of Intel 7265 WiFI Bluetooth adapter instead of Broadcom
-2. Comand and option buttons are [swapped](https://github.com/nickdsmd/Lenovo-ThinkPad-T450s-Hackintosh-Big-Sur-OpenCore/commit/0477379a8c0f3b6db4acb3ac29c27d82ee28cf98) (Win button is option, Alt is Command)
+1. Support of Intel 7265 WiFi Bluetooth adapter instead of Broadcom
+2. Command and option buttons are [swapped](https://github.com/nickdsmd/Lenovo-ThinkPad-T450s-Hackintosh-Big-Sur-OpenCore/commit/0477379a8c0f3b6db4acb3ac29c27d82ee28cf98) (Win button is option, Alt is Command)
 3. In the section `PlatformInfo` of [config.plist](./EFI/OC/config.plist) you should paste your own Ids for:
     - `MLB`
     - `ROM`
